@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatGridListModule } from '@angular/material';
+import { MatGridListModule, MatToolbarModule, MatRippleModule, MatCardModule, MatMenuModule, MatButtonModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +16,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatGridListModule
+    MatGridListModule,
+    MatToolbarModule,
+    MatRippleModule,
+    MatCardModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

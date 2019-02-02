@@ -1,13 +1,51 @@
-<mat-grid-list #grid cols="3" rowHeight="100px">
-  <mat-grid-tile [colspan]="maxCol"
-      rowspan="1"
-      [style.background]="'blue'">this is some text</mat-grid-tile>
-  <mat-grid-tile [style.background]="'red'"></mat-grid-tile>
-  <mat-grid-tile [style.background]="'green'"></mat-grid-tile>
-  <mat-grid-tile [style.background]="'orange'"></mat-grid-tile>
-  <mat-grid-tile [style.background]="'purple'"></mat-grid-tile>
-  <mat-grid-tile [style.background]="'yellow'"></mat-grid-tile>
-  <mat-grid-tile [style.background]="'blue'"></mat-grid-tile>
-</mat-grid-list>
+<div fxLayout="column" fxLayoutAlign="center stretch" style="width: 100%; height: 100%; background-color: lightblue; overflow: auto">
+  <div fxFlex="10" style="background-color: lightcoral;">
+
+  </div>
+  <div class="mat-elevation-z6" fxFlex="8" fxLayout="row" fxLayoutAlign="center stretch" style="background-color: mediumpurple; z-index: 999">
+    <div fxFlex="10%" fxLayoutAlign="center center">
+      menu1
+    </div>
+    <div fxFlex="10%" fxLayoutAlign="center center">
+      menu2
+    </div>
+    <div fxFlex="10%" fxLayoutAlign="center center">
+      menu3
+    </div>
+    <div fxFlex="10%" fxLayoutAlign="center center">
+      menu4
+    </div>
+    <div fxFlex="10%" fxLayoutAlign="center center" #trigger="matMenuTrigger" [matMenuTriggerFor]="menu" (mouseover)="trigger.openMenu()">
+      Menu
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
+  <div fxFlex="77" fxLayout="column" fxLayoutAlign="start stretch" style="background-color: lightgreen">
+    <div fxFlex="45%" style="background-color: red">
+
+    </div>
+    <div fxFlex="55%" fxLayout="row" fxLayoutAlign="space-around stretch" style="background-color: turquoise">
+      <mat-card matRipple fxFlex="32%" style="background-color: greenyellow" [class.mat-elevation-z15]="moused" (mouseover)="moused=true"
+      (mouseout)="moused=false">
+
+      </mat-card>
+      <mat-card matRipple fxFlex="32%" style="background-color: hotpink" [class.mat-elevation-z15]="moused2" (mouseover)="moused2=true"
+      (mouseout)="moused2=false">
+
+      </mat-card>
+      <mat-card matRipple fxFlex="32%" style="background-color: indigo" [class.mat-elevation-z15]="moused3" (mouseover)="moused3=true"
+      (mouseout)="moused3=false">
+
+      </mat-card>
+    </div>
+  </div>
+  <div fxFlex="5" style="background-color: rgb(3, 3, 114)">
+
+  </div>
+</div>
+
 
 <router-outlet></router-outlet>
