@@ -1,5 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {
+  MatGridListModule,
+  MatToolbarModule,
+  MatRippleModule,
+  MatCardModule,
+  MatMenuModule,
+  MatButtonModule,
+  MatDividerModule
+} from '@angular/material';
 
 import { MainRoutingModule } from './main-routing.module';
 import { ProductsModule } from '../products/products.module';
@@ -18,6 +29,15 @@ import { MainService } from './main.service';
   imports: [
     CommonModule,
     MainRoutingModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatRippleModule,
+    MatCardModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatDividerModule,
     ProductsModule,
     LoginModule,
     SupportModule,

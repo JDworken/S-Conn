@@ -1,3 +1,78 @@
-<p>
-  main works!
-</p>
+<div fxLayout="column" fxLayoutAlign="center stretch" style="width: 100%; height: 100%; overflow: auto">
+  <div class="header" fxFlex="10">
+    <img title="placeholder" src="https://softconn.com/wp-content/uploads/2014/09/softconn-logo.gif">
+  </div>
+  <div class="main-menu mat-elevation-z6" fxFlex="8" fxLayout="row" fxLayoutAlign="center stretch" fxHide.xs>
+    <mat-divider [vertical]="true"></mat-divider>
+    <div fxFlex.gt-xs="15%">
+      <button routerLink="/" mat-flat-button color="primary" fxFill>Home</button>
+    </div>
+    <mat-divider [vertical]="true"></mat-divider>
+    <div class="dropdown" fxFlex.gt-xs="15%">
+      <button class="dropbtn" mat-flat-button color="primary" fxFill>Products</button>
+      <div class="dropdown-content" ngClass.gt-sm="dropdown-content-stretch" ngClass.gt-md="dropdown-fullsize-text dropdown-content-stretch">
+        <mat-divider></mat-divider>
+        <a routerLink="/">Bookkeeper</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/">Tax Table Updates</a>
+      </div>
+    </div>
+    <mat-divider [vertical]="true"></mat-divider>
+    <div class="dropdown" fxFlex.gt-xs="15%">
+        <button class="dropbtn" mat-flat-button color="primary" fxFill>Promos</button>
+        <div class="dropdown-content" ngClass.gt-sm="dropdown-content-stretch" ngClass.gt-md="dropdown-fullsize-text dropdown-content-stretch">
+          <mat-divider></mat-divider>
+          <a routerLink="/">Contests</a>
+          <mat-divider></mat-divider>
+          <a routerLink="/">Donations</a>
+          <mat-divider></mat-divider>
+          <a routerLink="/">Referral Program</a>
+        </div>
+      </div>
+      <mat-divider [vertical]="true"></mat-divider>
+    <!-- <div class="dropdown" fxFlex="15%">
+      <button class="dropbtn" mat-flat-button color="primary" fxFill>Blog</button>
+      <div class="dropdown-content">
+        <mat-divider></mat-divider>
+        <a routerLink="/">Link 1</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/">Link 2</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/">Link 3</a>
+      </div>
+    </div>
+    <mat-divider [vertical]="true"></mat-divider> -->
+    <div class="dropdown" fxFlex.gt-xs="15%">
+      <button class="dropbtn" mat-flat-button color="primary" fxFill>Support</button>
+      <div class="dropdown-content" ngClass.gt-sm="dropdown-content-stretch" ngClass.gt-md="dropdown-fullsize-text dropdown-content-stretch">
+        <mat-divider></mat-divider>
+        <a routerLink="/">Video Tutorials</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/">Forum</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/">FAQ</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/">Contact Support</a>
+      </div>
+    </div>
+    <mat-divider [vertical]="true"></mat-divider>
+  </div>
+  <div fxFlex="77" fxLayout="column" fxLayoutAlign="start stretch" style="background-color: lightgreen">
+    <div fxFlex="45%" style="background-color: red">
+
+    </div>
+    <div fxFlex="55%" fxLayout="row" fxLayoutAlign="space-around stretch" style="background-color: turquoise">
+      <mat-card matRipple fxFlex="49%" style="background-color: greenyellow" [class.mat-elevation-z15]="moused"
+        (mouseover)="moused=true" (mouseout)="moused=false">
+
+      </mat-card>
+      <mat-card matRipple fxFlex="49%" style="background-color: hotpink" [class.mat-elevation-z15]="moused2"
+        (mouseover)="moused2=true" (mouseout)="moused2=false">
+
+      </mat-card>
+    </div>
+  </div>
+  <footer fxFlex="5" fxLayout="row" fxLayoutAlign="start center" style="background-color: rgb(3, 3, 114); color:#ffffff;">
+    SoftConn <sup>&copy;</sup>
+  </footer>
+</div>

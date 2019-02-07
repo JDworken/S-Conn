@@ -1,6 +1,5 @@
-import { Component, AfterContentInit, ViewChild, ElementRef} from '@angular/core';
-import { MediaObserver, MediaChange,  } from '@angular/flex-layout';
-import { MatGridList } from '@angular/material';
+import { Component, AfterContentInit, ViewChild, ElementRef } from '@angular/core';
+import { MediaObserver, MediaChange, } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,7 @@ export class AppComponent implements AfterContentInit {
     xs: 1
   };
 
-  constructor(private mediaObserver: MediaObserver) {}
+  constructor(private mediaObserver: MediaObserver) { }
 
   ngAfterContentInit(): void {
     this.mediaObserver.media$.subscribe((change: MediaChange) => {
@@ -28,5 +27,5 @@ export class AppComponent implements AfterContentInit {
     });
   }
 
-  
+
 }
